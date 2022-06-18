@@ -15,7 +15,7 @@ public class GameManager : MonoSingleton<GameManager>
         {
             if(_currentCharacter == null)
             {
-                var charaName = PlayerPrefs.GetString("MyCharacter", "00.Stone");
+                var charaName = PlayerPrefs.GetString("MyCharacter", "00.Alco");
                 _currentCharacter = Resources.Load<Character>("CharaSO/"+charaName);            
             }
             return _currentCharacter;

@@ -6,6 +6,10 @@
 - Fungus https://fungusgames.com/
 - Google Map https://www.google.com/maps/@25.0375876,121.5490786,18z
 
+
+## Fonts
+- 內海字體 https://github.com/max32002/naikaifont
+
 ## Sprites
 - SquareLive 授權 KGJ 使用素材  *(素材僅限 Game Jam 期間運用，故未上傳於此)*
 - Car - opengameart  https://opengameart.org/content/car-pixelart
