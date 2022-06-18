@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 5983146554448104826}
   - component: {fileID: 5983146554448104824}
   - component: {fileID: 5983146554448104827}
+  - component: {fileID: 1701730334950255163}
   m_Layer: 5
   m_Name: StatisticPanel
   m_TagString: Untagged
@@ -282,6 +283,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &1701730334950255163
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5983146554448104837}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6095191974682507251
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2493105586542117375}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ce11d007cbf4a2445b87f38bdb9b5a57, type: 2}
+        m_TargetAssemblyTypeName: OpenMenuChannel, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6897973960495723564
 GameObject:
   m_ObjectHideFlags: 0
