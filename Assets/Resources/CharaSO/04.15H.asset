@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3971e9ffe67cb148a034fd2a84e0beb, type: 3}
+  m_Name: 04.15H
+  m_EditorClassIdentifier: 
+  Name: "\u5341\u4E94\u865F"
+  LovePointMultiplier: 1
+  Icons:
+  - {fileID: 21300000, guid: 844bd63a22257d64b9882498782fd011, type: 3}
+  - {fileID: 21300000, guid: df9271035c0128f4986506c96bb2830a, type: 3}
+  - {fileID: 21300000, guid: 513e6eed426ecf645a39870f172aa4a1, type: 3}
+  Sprites:
+  - {fileID: 21300000, guid: 15e075946b42d8d438f137bc09bed66e, type: 3}
+  - {fileID: 21300000, guid: 0bc6491ef6de0b44b8d7d7926f17f42c, type: 3}
+  OverrideEngineSound: {fileID: 0}

@@ -7,6 +7,7 @@ public class Character : ScriptableObject
 {
     public string Name;
     public float LovePointMultiplier = 1f;
-    public Sprite Sprite;
+    public Sprite[] Icons;
+    public Sprite[] Sprites;
     public AudioClip OverrideEngineSound;
 }
