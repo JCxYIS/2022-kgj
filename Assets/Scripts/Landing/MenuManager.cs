@@ -64,4 +64,9 @@ public class MenuManager : MonoBehaviour
         _currentPanel.transform.DOScale(1.0f, .2f).From(Vector3.one * .8f);
         _currentPanel.DOFade(1, .2f).From(0);
     }
+
+    public void GoGame()
+    {
+        GameManager.Instance.GoGame();
+    }
 }

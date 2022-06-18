@@ -41,7 +41,7 @@ public class CarController : MonoBehaviour
         // move
         float speed = _speedometer.Speed;
         transform.Translate(Vector3.left * MoveSensitivity * speed * .01f * Time.deltaTime);
-        print(speed);
+        // print(speed);
 
         // unlock speed
         // SpeedLock = 100f;
@@ -93,6 +93,7 @@ public class CarController : MonoBehaviour
         else if(other.CompareTag("Exit"))
         {
             _timer.StopTimer();
+            GameManager.Instance.MainGameEnded(CheckpointPassed, _timer.time);
         }
         else if(other.CompareTag("Circulation"))
         {

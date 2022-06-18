@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoSingleton<GameManager>
 {
@@ -26,9 +27,11 @@ public class GameManager : MonoSingleton<GameManager>
             PlayerPrefs.SetString("MyCharacter", value.name);
         }
     }
-
-
     
+    /* -------------------------------------------------------------------------- */
+
+    public bool IsEndedFromMainGame = false;
+
     /* -------------------------------------------------------------------------- */
 
     protected override void Init()
@@ -37,9 +40,17 @@ public class GameManager : MonoSingleton<GameManager>
         DontDestroyOnLoad(gameObject);        
     }
     
+    public void GoGame()
+    {
+        SceneManager.LoadScene("Story");
+        PlayerPrefs.Save();
+    }
 
     public void MainGameEnded(int checkpointPassed, float time)
     {
         Debug.Log($"Main game ended. Checkpoint passed: {checkpointPassed}, time: {time}");
+        IsEndedFromMainGame = true;
+        SceneManager.LoadScene("Story");
+        PlayerPrefs.Save();
     }
 }
