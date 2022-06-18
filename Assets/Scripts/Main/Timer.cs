@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
             time += Time.deltaTime;
         }
 
-        text.text = $"TIME: {(time/60).ToString("00")}:{(time%60).ToString("00")}.{(time*100%100).ToString("00")}";
+        text.text = $"TIME: {((int)time/60).ToString("00")}:{(time%60).ToString("00")}.{(time*100%100).ToString("00")}";
     }
 
     public void StartTimer()

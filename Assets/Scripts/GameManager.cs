@@ -4,7 +4,19 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    private static GameManager _instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                var g = new GameObject("GameManager");
+                _instance = g.AddComponent<GameManager>();
+            }
+            return _instance;
+        }
+    }
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.

@@ -154,7 +154,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -581,7 +581,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d69b912057ff3374c964a45e4f05551c, type: 3}
-  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1198,6 +1198,7 @@ MonoBehaviour:
   _speedometer: {fileID: 1752392469}
   _timer: {fileID: 1624137197}
   CheckpointPassed: 0
+  CollideTimes: 0
 --- !u!60 &1053199665
 PolygonCollider2D:
   m_ObjectHideFlags: 0
