@@ -2,35 +2,41 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
-    private static GameManager _instance;
-    public static GameManager Instance
+    /* -------------------------------------------------------------------------- */
+
+
+    private Character _currentCharacter;
+
+    public Character CurrentCharacter
     {
         get
         {
-            if (_instance == null)
+            if(_currentCharacter == null)
             {
-                var g = new GameObject("GameManager");
-                _instance = g.AddComponent<GameManager>();
+                var charaName = PlayerPrefs.GetString("MyCharacter", "00.Stone");
+                _currentCharacter = Resources.Load<Character>("CharaSO/"+charaName);            
             }
-            return _instance;
+            return _currentCharacter;
+        }
+        set
+        {
+            _currentCharacter = value;
+            PlayerPrefs.SetString("MyCharacter", value.name);
         }
     }
 
-    /// <summary>
-    /// Awake is called when the script instance is being loaded.
-    /// </summary>
-    void Awake()
-    {
-        if(Instance)
-        {
-            Destroy(gameObject);
-            return;
-        }
 
+    
+    /* -------------------------------------------------------------------------- */
+
+    protected override void Init()
+    {
+        
         DontDestroyOnLoad(gameObject);        
     }
+    
 
     public void MainGameEnded(int checkpointPassed, float time)
     {

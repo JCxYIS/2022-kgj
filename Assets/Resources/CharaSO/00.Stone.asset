@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u77F3\u982D"
   LovePointMultiplier: 25
-  Sprite: {fileID: 0}
+  Icons:
+  - {fileID: 21300000, guid: 4c43fae75f08ea047a74b07ad5f10258, type: 3}
+  Sprites:
+  - {fileID: 21300000, guid: 4c43fae75f08ea047a74b07ad5f10258, type: 3}
   OverrideEngineSound: {fileID: 0}
