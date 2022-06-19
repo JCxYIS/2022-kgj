@@ -406,6 +406,12 @@ GameObject:
   - component: {fileID: 650631833}
   - component: {fileID: 650631802}
   - component: {fileID: 650631836}
+  - component: {fileID: 650631837}
+  - component: {fileID: 650631838}
+  - component: {fileID: 650631839}
+  - component: {fileID: 650631841}
+  - component: {fileID: 650631840}
+  - component: {fileID: 650631842}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -605,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -164.21027, y: 49.458534}
+  scrollPos: {x: -91.210266, y: 35.458534}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
@@ -617,9 +623,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 650631835}
+  - {fileID: 650631811}
   selectedCommands:
-  - {fileID: 650631834}
+  - {fileID: 650631842}
   variables: []
   description: 
   stepPause: 0
@@ -643,7 +649,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &650631806
 MonoBehaviour:
@@ -706,6 +712,7 @@ MonoBehaviour:
   - {fileID: 650631830}
   - {fileID: 650631829}
   - {fileID: 650631831}
+  - {fileID: 650631838}
   - {fileID: 650631808}
   - {fileID: 650631813}
   suppressAllAutoSelections: 0
@@ -825,6 +832,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 650631822}
+  - {fileID: 650631842}
   - {fileID: 650631821}
   - {fileID: 650631816}
   - {fileID: 650631820}
@@ -1167,7 +1175,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 650631837}
   - {fileID: 650631828}
+  - {fileID: 650631839}
+  - {fileID: 650631840}
+  - {fileID: 650631841}
   - {fileID: 650631836}
   suppressAllAutoSelections: 0
 --- !u!114 &650631825
@@ -1255,14 +1267,7 @@ MonoBehaviour:
     stringRef: {fileID: 0}
     stringVal: "??? \u8868\u60C5-crop Right: \u9019\u592A\u4E0D\u5408\u7406\u4E86\u5427\uFF01\u53EA\u662F\u4E00\u500B\u5713\u74B0\u7ADF\u7136\u53EF\u4EE5\u63D0\u5347\u597D\u611F\u5EA6\uFF1F\uFF1F\nme
       meme Left: \u9019\u662F\u4EC1\u611B\u5713\u74B0\u554A\n??? \u8868\u60C5-crop2:
-      \uFF1F\uFF1F\u6709\u4EC0\u9EBC\u7279\u5225\u7684\u55CE\uFF1F\nme: \u4F60\u8981\u4E0D\u8981\u770B\u4E00\u4E0B\u672C\u4F5C\u7684\u540D\u5B57\n???
-      \u8868\u60C5-crop Right: Renai Circulation.. \u592A\u7CDE\u4E86\u5427\uFF0C\u6240\u4EE5\u7E5E\u5713\u74B0\u8DDF\u597D\u611F\u5EA6\u53C8\u6709\u751A\u9EBC\u95DC\u4FC2\u4E86\nme:
-      \u624B\u904A\u88E1\u9762\u4F60\u96A8\u4FBF\u53EB\u88E1\u9762\u89D2\u8272\u51FA\u53BB\u6253\u6253\u67B6\u4E5F\u6703\u5C0D\u4F60\u5347\u597D\u611F\u5EA6\u554A\u3002\n???
-      \u5E73\u5E73\u5B50\u8EFC\u4E8B(\u7121\u5B57)-crop2: \u597D\u50CF\u4E5F\u6709\u9EDE\u9053\u7406\u3002\nme:
-      \u6CC1\u4E14\u9019\u5C31\u662F\u500B\u7CDE game\uFF0C\u5225\u5728\u610F\u90A3\u9EBC\u591A\u5566~\n???:
-      \u597D\u50CF\u54EA\u88E1\u602A\u602A\u7684\uFF0C\u4F46\u662F\u6211\u4E5F\u8AAA\u4E0D\u4E0A\u4F86\nme:
-      \u90A3\u9EBC\uFF0C\u4E0B\u4E00\u4F4D\u5C31\u63DB\u4F60\u56C9\u3002\n??? \u8868\u60C5-crop3:
-      \u8BF6\uFF1F\uFF1F\uFF1F"
+      \uFF1F\uFF1F\u6709\u4EC0\u9EBC\u7279\u5225\u7684\u55CE\uFF1F\nme: \u4F60\u8981\u4E0D\u8981\u770B\u4E00\u4E0B\u672C\u4F5C\u7684\u540D\u5B57\n"
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -1466,6 +1471,266 @@ MonoBehaviour:
     stringVal: Landing
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &650631837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650631797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1726730596}
+  targetComponentAssemblyName: AchiCompleteCaller, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: AchiCompleteCaller
+  targetMethod: Call
+  targetMethodText: 'Call (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: ACHI_03
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &650631838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650631797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1726730596}
+  targetComponentAssemblyName: AchiCompleteCaller, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: AchiCompleteCaller
+  targetMethod: Call
+  targetMethodText: 'Call (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: ACHI_05
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &650631839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650631797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1726730596}
+  targetComponentAssemblyName: AchiCompleteCaller, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: AchiCompleteCaller
+  targetMethod: Call
+  targetMethodText: 'Call (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: ACHI_06
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &650631840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650631797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 45
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "??? \u8868\u60C5-crop Right: Renai Circulation.. \u592A\u7CDE\u4E86\u5427\uFF0C\u6240\u4EE5\u7E5E\u5713\u74B0\u8DDF\u597D\u611F\u5EA6\u53C8\u6709\u751A\u9EBC\u95DC\u4FC2\u4E86\nme:
+      \u624B\u904A\u88E1\u9762\u4F60\u96A8\u4FBF\u53EB\u88E1\u9762\u89D2\u8272\u51FA\u53BB\u6253\u6253\u67B6\u4E5F\u6703\u5C0D\u4F60\u5347\u597D\u611F\u5EA6\u554A\u3002\n???
+      \u5E73\u5E73\u5B50\u8EFC\u4E8B(\u7121\u5B57)-crop2: \u597D\u50CF\u4E5F\u6709\u9EDE\u9053\u7406\u3002\nme:
+      \u6CC1\u4E14\u9019\u5C31\u662F\u500B\u7CDE game\uFF0C\u5225\u5728\u610F\u90A3\u9EBC\u591A\u5566~\n???:
+      \u597D\u50CF\u54EA\u88E1\u602A\u602A\u7684\uFF0C\u4F46\u662F\u6211\u4E5F\u8AAA\u4E0D\u4E0A\u4F86\nme:
+      \u90A3\u9EBC\uFF0C\u4E0B\u4E00\u4F4D\u5C31\u63DB\u4F60\u56C9\u3002\n??? \u8868\u60C5-crop3:
+      \u8BF6\uFF1F\uFF1F\uFF1F"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &650631841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650631797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1726730596}
+  targetComponentAssemblyName: AchiCompleteCaller, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: AchiCompleteCaller
+  targetMethod: Call
+  targetMethodText: 'Call (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: ACHI_03
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &650631842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650631797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1726730596}
+  targetComponentAssemblyName: AchiCompleteCaller, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: AchiCompleteCaller
+  targetMethod: Call
+  targetMethodText: 'Call (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: ACHI_07
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &669969295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,7 +1783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &840230524
 GameObject:
@@ -1611,7 +1876,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1102473135
 GameObject:
@@ -1663,7 +1928,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106704534
 GameObject:
@@ -2015,7 +2280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523336033
 GameObject:
@@ -2066,7 +2331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625261732
 GameObject:
@@ -2275,7 +2540,50 @@ Transform:
   - {fileID: 1855252292}
   - {fileID: 145421745}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1726730596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726730598}
+  - component: {fileID: 1726730597}
+  m_Layer: 0
+  m_Name: Achi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1726730597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726730596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f4a3c35e3121e4898b4f7c20254e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1726730598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726730596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.94223, y: 110.14931, z: 69.512634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1798945921
 GameObject:
@@ -2363,7 +2671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855252288
 GameObject:
@@ -2495,7 +2803,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073881253
 GameObject:

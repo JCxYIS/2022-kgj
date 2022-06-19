@@ -36,14 +36,14 @@ public class GameManager : MonoSingleton<GameManager>
 
     protected override void Init()
     {
-        
+        Application.targetFrameRate = 60;
         DontDestroyOnLoad(gameObject);        
     }
     
     public void GoGame()
     {
         SceneManager.LoadScene("Story");
-        PlayerPrefs.Save();
+        PlayerPrefs.Save();        
     }
 
     public void MainGameEnded(int checkpointPassed, float time)
@@ -103,6 +103,13 @@ public class GameManager : MonoSingleton<GameManager>
         PlayerPrefs.SetFloat("Love_"+character.name, lp);
         OverlayUI.Instance.AddLove(CurrentCharacter.Name, lp - amount, lp);
         return lp;
+    }
+    /* -------------------------------------------------------------------------- */
+    
+    public void AchievementComplete(string achiName)
+    {
+        PlayerPrefs.SetFloat(achiName, 1);
+        OverlayUI.Instance.AchievementComplete(achiName);
     }
 
 }

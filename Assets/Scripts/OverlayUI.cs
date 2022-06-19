@@ -24,6 +24,8 @@ public class OverlayUI : MonoBehaviour
     [SerializeField] Text _loveCharaName;
     [SerializeField] Text _loveCharaValue;
     [SerializeField] Text _loveCharaAddValue;
+    [SerializeField] RectTransform _achiPanel;
+    [SerializeField] Text _achiText;
 
 
 
@@ -34,6 +36,7 @@ public class OverlayUI : MonoBehaviour
     void Start()
     {
         _lovePanel.anchoredPosition = new Vector2(-300, -70.52f);
+        _achiPanel.anchoredPosition = new Vector2(0, -300f);
         DontDestroyOnLoad(gameObject);
     }
 
@@ -63,5 +66,13 @@ public class OverlayUI : MonoBehaviour
         _loveCharaAddValue.text = "+0" ;
         yield return new WaitForSeconds(1.5f);
         _lovePanel.DOAnchorPosX(-300f, .39f);
+    }
+
+    public void AchievementComplete(string achiname)
+    {
+        _achiText.text = achiname;
+        _achiPanel.DOAnchorPosY(0, .39f).From(new Vector2(0f, -300)).OnComplete(()=>{
+            _achiPanel.DOAnchorPosY(-300, .69f).SetDelay(3.5f);
+        });        
     }
 }

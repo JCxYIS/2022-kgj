@@ -18,6 +18,9 @@ public class CarController : MonoBehaviour
     public int CollideTimes = 0;
     int expectedNextInstruction = 1;
 
+    short lastButton = 0;
+    bool useOnlyOneButton = true;
+
 
 
 
@@ -42,10 +45,22 @@ public class CarController : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             transform.Rotate(0, 0, RotateSensitivity * Time.deltaTime);
+
+            if(lastButton != 0)
+            {
+                useOnlyOneButton = false;
+            }
+            lastButton = 0;
         }
         else if (Input.GetMouseButton(1))
         {
             transform.Rotate(0, 0, -RotateSensitivity * Time.deltaTime);
+
+            if(lastButton != 1)
+            {
+                useOnlyOneButton = false;
+            }
+            lastButton = 1;
         }
 
         // move
@@ -117,6 +132,15 @@ public class CarController : MonoBehaviour
                     {
                         PlayerPrefs.SetFloat("STAT_BestLapTime", lapTime);
                     }
+                    if(lapTime <= 15)
+                    {
+                        GameManager.Instance.AchievementComplete("ACHI_DEJA_VU");
+                    }
+                    if(useOnlyOneButton)
+                    {
+                        GameManager.Instance.AchievementComplete("ACHI_08A");
+                    }
+                    useOnlyOneButton = false;
                     _timer.NewLap();
                 }
             }

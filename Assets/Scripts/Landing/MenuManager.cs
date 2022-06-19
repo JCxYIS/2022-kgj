@@ -49,7 +49,10 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.F4))
+        {
+            Screen.fullScreen = !Screen.fullScreen;
+        }
     }
 
     public void OpenPanel(int index)
@@ -70,6 +73,7 @@ public class MenuManager : MonoBehaviour
         _currentPanel.DOFade(1, .2f).From(0);
 
         //  OverlayUI.Instance.AddLove(GameManager.Instance.CurrentCharacter.Name, 10, 87);
+        // OverlayUI.Instance.AchievementComplete("StartGame");
     }
 
     public void GoGame()

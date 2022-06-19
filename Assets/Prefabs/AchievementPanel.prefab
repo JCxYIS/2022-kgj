@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 1701730335601533890}
   - component: {fileID: 1701730335601533889}
   - component: {fileID: 3063571372904949083}
+  - component: {fileID: 4605015213554770422}
   m_Layer: 5
   m_Name: AchievementPanel
   m_TagString: Untagged
@@ -335,6 +336,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &4605015213554770422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701730335601533759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04af8c386cd0cff40bf0ff552e15b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _model: {fileID: 7515600301246203076}
 --- !u!1 &2115397913340967862
 GameObject:
   m_ObjectHideFlags: 0
