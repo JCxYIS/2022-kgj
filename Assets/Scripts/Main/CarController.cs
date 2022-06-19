@@ -145,6 +145,7 @@ public class CarController : MonoBehaviour
                         GameManager.Instance.AchievementComplete("ACHI_SAFE");
                     }
                     useOnlyOneButton = false;
+                    CollideTimesPerLap = 0;
                     _timer.NewLap();
                 }
             }
