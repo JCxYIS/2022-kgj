@@ -1668,7 +1668,7 @@ MonoBehaviour:
   _timer: {fileID: 1624137197}
   _mainStoryController: {fileID: 1279168805}
   CheckpointPassed: 0
-  CollideTimes: 0
+  CollideTimesPerLap: 0
 --- !u!60 &1053199665
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2526,6 +2526,7 @@ Transform:
   - {fileID: 1050893549}
   - {fileID: 1526369686}
   - {fileID: 199241009}
+  - {fileID: 1805850203}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2732,6 +2733,7 @@ GameObject:
   - component: {fileID: 1346885764}
   - component: {fileID: 1346885766}
   - component: {fileID: 1346885765}
+  - component: {fileID: 1346885767}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2885,7 +2887,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 653
     y: 36.999992
-    width: 117
+    width: 120.30927
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3114,7 +3116,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 519
     y: 173
-    width: 68
+    width: 69.79381
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3243,7 +3245,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 286
     y: 218
-    width: 100
+    width: 102.7835
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3425,7 +3427,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 236
     y: 124
-    width: 60
+    width: 60.51546
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3454,7 +3456,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 363
     y: 163
-    width: 77
+    width: 79.07217
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3484,7 +3486,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 354
     y: 79
-    width: 70
+    width: 71.85567
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3766,19 +3768,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -208.21027, y: -7.5414658}
+  scrollPos: {x: -268.7051, y: -19.376522}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1346885763}
+  selectedCommands:
+  - {fileID: 1346885764}
   variables: []
   description: 
   stepPause: 0
@@ -3806,7 +3810,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 664.21027
     y: 198.54147
-    width: 76
+    width: 78.04124
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3892,7 +3896,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 668.21027
     y: 244.54147
-    width: 77
+    width: 79.07217
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3949,7 +3953,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 664.21027
     y: 142.54147
-    width: 75
+    width: 77.01031
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3960,6 +3964,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1346885762}
   - {fileID: 1346885764}
+  - {fileID: 1346885767}
   suppressAllAutoSelections: 0
 --- !u!114 &1346885764
 MonoBehaviour:
@@ -3981,16 +3986,16 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1279168805}
-        m_TargetAssemblyTypeName: MainStoryController, Assembly-CSharp
-        m_MethodName: StoryEnd
-        m_Mode: 1
+      - m_Target: {fileID: 1805850202}
+        m_TargetAssemblyTypeName: AchiCompleteCaller, Assembly-CSharp
+        m_MethodName: Call
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ACHI_08
           m_BoolArgument: 0
         m_CallState: 2
   booleanParameter:
@@ -4086,6 +4091,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 50
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1279168805}
+        m_TargetAssemblyTypeName: MainStoryController, Assembly-CSharp
+        m_MethodName: StoryEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1346885767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346885718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 52
   indentLevel: 0
   description: 
   delay: 0
@@ -4896,6 +4957,49 @@ MonoBehaviour:
   slider: {fileID: 821626238}
   text: {fileID: 1242053073}
   IsSpeedLockActive: 0
+--- !u!1 &1805850201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805850203}
+  - component: {fileID: 1805850202}
+  m_Layer: 0
+  m_Name: Achi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1805850202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805850201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f4a3c35e3121e4898b4f7c20254e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1805850203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805850201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 60.561687, y: 81.12449, z: -5.641609}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1279168804}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848846208
 GameObject:
   m_ObjectHideFlags: 0

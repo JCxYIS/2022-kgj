@@ -136,6 +136,10 @@ public class CarController : MonoBehaviour
                     {
                         GameManager.Instance.AchievementComplete("ACHI_DEJA_VU");
                     }
+                    else if(lapTime >= 120)
+                    {
+                        GameManager.Instance.AchievementComplete("ACHI_DEJA_VU_DE");                        
+                    }
                     if(useOnlyOneButton)
                     {
                         GameManager.Instance.AchievementComplete("ACHI_08A");
@@ -143,8 +147,11 @@ public class CarController : MonoBehaviour
                     if(CollideTimesPerLap == 0)
                     {
                         GameManager.Instance.AchievementComplete("ACHI_SAFE");
+
+                        if(lapTime <= 20)
+                            GameManager.Instance.AchievementComplete("ACHI_SAFE2");
                     }
-                    useOnlyOneButton = false;
+                    useOnlyOneButton = true;
                     CollideTimesPerLap = 0;
                     _timer.NewLap();
                 }
