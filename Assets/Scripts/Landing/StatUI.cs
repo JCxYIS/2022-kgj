@@ -29,6 +29,7 @@ public class StatUI : MonoBehaviour
         new Stat("STAT_KM", "總行駛距離", "m"),
         new Stat("STAT_BestLapTime",  "最快繞行時間", "秒"),
         new Stat("STAT_Collide",  "總撞車次數", "次"),
+        new Stat("STAT_TOTAL_LOVE",  "總好感度", ""),
     };
 
 
@@ -49,6 +50,6 @@ public class StatUI : MonoBehaviour
     {
         var g = Instantiate(_model, _model.transform.parent.transform);
         g.transform.GetChild(0).GetComponent<Text>().text = name;
-        g.transform.GetChild(1).GetComponent<Text>().text = PlayerPrefs.GetFloat(key, 0) + " " + unit;
+        g.transform.GetChild(1).GetComponent<Text>().text = PlayerPrefs.GetFloat(key, 0).ToString("F2") + " " + unit;
     }
 }

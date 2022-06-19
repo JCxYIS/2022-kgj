@@ -15,17 +15,17 @@ public class CharacterSelect : MonoBehaviour
 
     Character _currentCharacter;
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    void Start()
-    {
-        _currentCharacter = GameManager.Instance.CurrentCharacter;
-        SetCharaArt();
 
+
+
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    void Awake()
+    {
         Character[] characters = Resources.LoadAll<Character>("CharaSO");
         print("Loaded characters: " + characters.Length);
+        float totalLove = 0;
         foreach (var character in characters)
         {
             var model = Instantiate(_modelPrefab.gameObject, _modelPrefab.transform.parent.transform).GetComponent<CharacterSelectButton>();
@@ -39,8 +39,20 @@ public class CharacterSelect : MonoBehaviour
                 _currentCharacter = chara;
                 SetCharaArt();
             });
+            totalLove += GameManager.Instance.GetLovePoint(character);
         }
+        PlayerPrefs.SetFloat("STAT_TOTAL_LOVE", totalLove);
         _modelPrefab.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        _currentCharacter = GameManager.Instance.CurrentCharacter;
+        SetCharaArt();        
     }
 
     public void SetCharaArt()
