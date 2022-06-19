@@ -6,6 +6,8 @@ using System.Collections.Generic;
 public class Timer : MonoBehaviour
 {
     [SerializeField] Text text;
+    [SerializeField] MainStoryController mainStoryController;
+    
 
 
     [Header("Runtime")]
@@ -28,7 +30,7 @@ public class Timer : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(isRunning)
+        if(isRunning && !mainStoryController.IsStoryShowing)
         {
             time += Time.deltaTime;
         }

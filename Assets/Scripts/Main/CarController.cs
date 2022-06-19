@@ -11,10 +11,12 @@ public class CarController : MonoBehaviour
     [Header("Bindings")]
     [SerializeField] Speedometer _speedometer;
     [SerializeField] Timer _timer;
+    [SerializeField] MainStoryController _mainStoryController;
 
     [Header("Runtime")]
     public int CheckpointPassed = 0;
     public int CollideTimes = 0;
+    int expectedNextInstruction = 1;
 
 
 
@@ -22,12 +24,20 @@ public class CarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(GameManager.Instance.CurrentCharacter.name.Contains("00"))
+        {
+            _mainStoryController.StartInstruction(1);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(_mainStoryController.IsStoryShowing)
+        {
+            return;
+        }
+
         // turn
         if(Input.GetMouseButton(0))
         {
@@ -88,7 +98,32 @@ public class CarController : MonoBehaviour
     {
         if(other.CompareTag("Checkpoint"))
         {
+            int checkpointId = int.Parse(other.name.Replace("Checkpoint (", "").Replace(")", ""));
+
+            if(checkpointId == expectedNextInstruction)
+            {
+                expectedNextInstruction++;
+                if(expectedNextInstruction > 8)
+                {
+                    expectedNextInstruction = 1;
+                }
+            }
+            else
+            {
+                Debug.Log($"錯誤的 Checkpoint，應該要是 {expectedNextInstruction} 但是通過 {checkpointId}");
+                return;
+            }
+
             CheckpointPassed++;
+
+            // Instruction
+            if(GameManager.Instance.CurrentCharacter.name.Contains("00"))
+            {                
+                if(checkpointId == 5)
+                    _mainStoryController.StartInstruction(2);
+                else if(checkpointId == 8)
+                    _mainStoryController.StartInstruction(3);
+            }
         }
         else if(other.CompareTag("Exit"))
         {
