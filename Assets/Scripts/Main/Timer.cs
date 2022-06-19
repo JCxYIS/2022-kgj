@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
 
     [Header("Runtime")]
     public float time;
+    public float lapTime;
     public bool isRunning;
 
 
@@ -33,6 +34,7 @@ public class Timer : MonoBehaviour
         if(isRunning && !mainStoryController.IsStoryShowing)
         {
             time += Time.deltaTime;
+            lapTime += Time.deltaTime;
         }
 
         text.text = $"TIME: {((int)time/60).ToString("00")}:{(time%60).ToString("00")}.{(time*100%100).ToString("00")}";
@@ -41,6 +43,11 @@ public class Timer : MonoBehaviour
     public void StartTimer()
     {
         isRunning = true;
+    }
+
+    public void NewLap()
+    {
+        lapTime = 0;
     }
 
     public void StopTimer()

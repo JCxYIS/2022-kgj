@@ -67,6 +67,8 @@ public class CarController : MonoBehaviour
     {
         _speedometer.IsSpeedLockActive = true;
         CollideTimes++;
+
+        PlayerPrefs.SetInt("STAT_Collide", PlayerPrefs.GetInt("STAT_Collide", 0) + 1);
     }
 
     /// <summary>
@@ -103,9 +105,19 @@ public class CarController : MonoBehaviour
             if(checkpointId == expectedNextInstruction)
             {
                 expectedNextInstruction++;
+
+                // LAP!
                 if(expectedNextInstruction > 8)
                 {
                     expectedNextInstruction = 1;
+
+                    float lapTime = _timer.lapTime;
+                    float bestLapTime = PlayerPrefs.GetFloat("STAT_BestLapTime", float.MaxValue);
+                    if(lapTime < bestLapTime)
+                    {
+                        PlayerPrefs.SetFloat("STAT_BestLapTime", lapTime);
+                    }
+                    _timer.NewLap();
                 }
             }
             else
