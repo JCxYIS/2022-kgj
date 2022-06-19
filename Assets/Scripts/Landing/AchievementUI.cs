@@ -32,13 +32,14 @@ public class AchievementUI : MonoBehaviour
         new Achi("ACHI_07", 1, "求報價", "遊戲中途會莫名彈出對話訊息請你報價"),
         new Achi("ACHI_08", 1, "連我阿嬤都會玩", "遊戲中僅使用一顆按鍵即可遊玩！我阿嬤說滑鼠不算按鍵"),
         new Achi("ACHI_08A", 1, "連我阿嬤都會玩．改", "只使用一個按鍵 (左鍵或右鍵，油門我不管) 就完成一圈"),
+        new Achi("ACHI_SAFE", 1, "安全第一", "不撞車的情況下就完成一圈"),
         new Achi("STAT_Laps", 100, "戀愛循環", "總行駛圈數超過 100 圈"),
         new Achi("STAT_KM", 48763, "超跑情人夢", "總行駛距離超過 48.763 公里"),
         new Achi("STAT_Collide", 487, "碰碰車", "撞車次數達到 487 "),
         new Achi("ACHI_DEJA_VU", 1, "Deja Vu", "在 15 秒內達成一圈"),
         new Achi("STAT_Collide", 1024, "保險業惡夢", "撞車次數達到 1024"),
         new Achi("STAT_Laps", 100, "莫比烏斯環", "總行駛圈數超過 1000 圈"),
-        new Achi("STAT_KM", 939.5f, "環島一圈！", "總行駛距離超過 939.5 公里"),
+        new Achi("STAT_KM", 939.5f*1000, "環島一圈！", "總行駛距離超過 939.5 公里"),
     };
 
 

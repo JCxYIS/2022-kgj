@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: 00.Alco
   m_EditorClassIdentifier: 
   Name: "\u9152"
-  LovePointMultiplier: 25
+  LovePointMultiplier: 3
   Icons:
   - {fileID: 21300000, guid: 3fce87cbdc73b6b4ebe9b52de17d9356, type: 3}
   - {fileID: 21300000, guid: 1c59e2a3f5df0634b8f91d7f5d328638, type: 3}
   Sprites:
   - {fileID: 21300000, guid: a68a3bfbe4835aa4bb610ecdbbc9cbeb, type: 3}
+  - {fileID: 21300000, guid: 51e93cb8054c3c24da77e8e16c98d237, type: 3}
   OverrideEngineSound: {fileID: 0}

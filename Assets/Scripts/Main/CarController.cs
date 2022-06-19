@@ -15,7 +15,7 @@ public class CarController : MonoBehaviour
 
     [Header("Runtime")]
     public int CheckpointPassed = 0;
-    public int CollideTimes = 0;
+    public int CollideTimesPerLap = 0;
     int expectedNextInstruction = 1;
 
     short lastButton = 0;
@@ -81,7 +81,7 @@ public class CarController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         _speedometer.IsSpeedLockActive = true;
-        CollideTimes++;
+        CollideTimesPerLap++;
 
         PlayerPrefs.SetFloat("STAT_Collide", PlayerPrefs.GetFloat("STAT_Collide", 0) + 1);
     }
@@ -139,6 +139,10 @@ public class CarController : MonoBehaviour
                     if(useOnlyOneButton)
                     {
                         GameManager.Instance.AchievementComplete("ACHI_08A");
+                    }
+                    if(CollideTimesPerLap == 0)
+                    {
+                        GameManager.Instance.AchievementComplete("ACHI_SAFE");
                     }
                     useOnlyOneButton = false;
                     _timer.NewLap();
