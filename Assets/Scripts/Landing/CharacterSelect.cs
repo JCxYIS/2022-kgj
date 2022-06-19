@@ -31,7 +31,7 @@ public class CharacterSelect : MonoBehaviour
             var model = Instantiate(_modelPrefab.gameObject, _modelPrefab.transform.parent.transform).GetComponent<CharacterSelectButton>();
 
             model.Name.text = character.Name;
-            model.Love.text = "TODO"; // TODO
+            model.Love.text = GameManager.Instance.GetLovePoint(character).ToString("0"); 
             model.Icon.sprite = character.GetIcon();
             var chara = character;
             model.Button.onClick.AddListener(() =>

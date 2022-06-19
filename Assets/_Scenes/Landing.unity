@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 1108369133}
   - component: {fileID: 1108369132}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,6 +924,30 @@ PrefabInstance:
     - target: {fileID: 594938371636300245, guid: edec3d829f81935419002ce1055673fb, type: 3}
       propertyPath: m_Name
       value: ChaarcterSelectPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812501328911781415, guid: edec3d829f81935419002ce1055673fb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812501328911781415, guid: edec3d829f81935419002ce1055673fb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812501328911781415, guid: edec3d829f81935419002ce1055673fb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812501328911781415, guid: edec3d829f81935419002ce1055673fb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812501328911781415, guid: edec3d829f81935419002ce1055673fb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812501328911781415, guid: edec3d829f81935419002ce1055673fb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edec3d829f81935419002ce1055673fb, type: 3}

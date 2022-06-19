@@ -39,6 +39,11 @@ public class MenuManager : MonoBehaviour
             _panels[i].gameObject.SetActive(false);
         }
         OpenPanel(0);
+
+        if(PlayerPrefs.GetInt("STAT_GamePlayed", 0) == 0)
+        {
+            GoGame();
+        }
     }
 
     // Update is called once per frame
