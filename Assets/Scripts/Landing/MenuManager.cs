@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -79,5 +80,11 @@ public class MenuManager : MonoBehaviour
     public void GoGame()
     {
         GameManager.Instance.GoGame();
+    }
+
+    public void ClearSave()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Landing");
     }
 }

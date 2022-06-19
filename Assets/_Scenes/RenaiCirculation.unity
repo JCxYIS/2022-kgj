@@ -4892,7 +4892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c7811f44a11c04c9faa920564c26d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScrollSensitivity: 150
+  ScrollSensitivity: 22.2222
   slider: {fileID: 821626238}
   text: {fileID: 1242053073}
   IsSpeedLockActive: 0

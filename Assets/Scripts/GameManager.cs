@@ -109,7 +109,7 @@ public class GameManager : MonoSingleton<GameManager>
     public void AchievementComplete(string achiName)
     {
         PlayerPrefs.SetFloat(achiName, 1);
-        OverlayUI.Instance.AchievementComplete(achiName);
+        OverlayUI.Instance.AchievementComplete(AchievementUI.GetAchiByKey(achiName).title);
     }
 
 }

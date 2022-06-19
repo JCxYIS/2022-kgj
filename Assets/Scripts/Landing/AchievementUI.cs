@@ -8,7 +8,7 @@ public class AchievementUI : MonoBehaviour
     [Header("Bindings")]
     public GameObject _model;
 
-    class Achi
+    public class Achi
     {
         public string key;
         public float requirement;
@@ -24,7 +24,7 @@ public class AchievementUI : MonoBehaviour
         }
     }
 
-    Achi[] achiList = new Achi[] { 
+    static Achi[] achiList = new Achi[] { 
         new Achi("ACHI_03", 1, "憑實力單身", "遊戲的結局中，主角最後是單身"),
         new Achi("ACHI_04", 1, "我單推", "遊戲中只有一位女主角"),
         new Achi("ACHI_05", 1, "開玩笑~我超勇的好不好", "遊戲中出現酒"),
@@ -60,5 +60,17 @@ public class AchievementUI : MonoBehaviour
         g.transform.GetChild(1).GetComponent<Text>().text = achi.desc;
         g.transform.GetChild(2).GetComponent<Slider>().value = value / achi.requirement;
         g.transform.GetChild(3).GetComponent<Text>().text = value.ToString("0") + "/" + achi.requirement;
+    }
+
+    public static Achi GetAchiByKey(string key)
+    {
+        for(int i = 0; i < achiList.Length; i++)
+        {
+            if(achiList[i].key == key)
+            {
+                return achiList[i];
+            }
+        }
+        return null;
     }
 }
