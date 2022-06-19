@@ -40,7 +40,7 @@ public class MenuManager : MonoBehaviour
         }
         OpenPanel(0);
 
-        if(PlayerPrefs.GetInt("STAT_GamePlayed", 0) == 0)
+        if(PlayerPrefs.GetFloat("STAT_GamePlayed", 0) == 0)
         {
             GoGame();
         }

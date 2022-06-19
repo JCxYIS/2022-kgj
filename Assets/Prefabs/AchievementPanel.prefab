@@ -503,7 +503,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0\u6210\u5C31\u6558\u8FF0"
+  m_Text: "\u9084\u6C92\u505A\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u4E0D\u662F\u863F\u8389\u63A7\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49\u6211\u5F88\u62B1\u6B49"
 --- !u!1 &2760601934354721477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1020,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 000/000
+  m_Text: 48763/9487
 --- !u!1 &4228085231072572718
 GameObject:
   m_ObjectHideFlags: 0

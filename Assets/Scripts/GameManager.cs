@@ -69,9 +69,9 @@ public class GameManager : MonoSingleton<GameManager>
         
         AddLovePoint(CurrentCharacter, (lap + bonus + checkpointPassed/24) * CurrentCharacter.LovePointMultiplier);
 
-        PlayerPrefs.SetInt("STAT_GamePlayed", PlayerPrefs.GetInt("STAT_GamePlayed", 0) + 1);
+        PlayerPrefs.SetFloat("STAT_GamePlayed", PlayerPrefs.GetFloat("STAT_GamePlayed", 0) + 1);
         PlayerPrefs.SetFloat("STAT_GameTime", PlayerPrefs.GetFloat("STAT_GameTime", 0) + time);
-        PlayerPrefs.SetInt("STAT_Laps", PlayerPrefs.GetInt("STAT_Laps", 0) + lap);
+        PlayerPrefs.SetFloat("STAT_Laps", PlayerPrefs.GetFloat("STAT_Laps", 0) + lap);
         PlayerPrefs.SetFloat("STAT_KM", PlayerPrefs.GetFloat("STAT_KM", 0) + checkpointPassed * 628f / 8f);
 
 

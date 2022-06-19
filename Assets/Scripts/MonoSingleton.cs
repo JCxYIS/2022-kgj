@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using System.Threading;
+// using System.Threading
 
 
 public abstract class MonoSingleton<T> : MonoBehaviour
@@ -9,7 +9,7 @@ where T : MonoSingleton<T>
 
     private static T m_Instance = null;
     private static string name;
-    private static Mutex mutex;
+    // private static Mutex mutex;
     public static T Instance
     {
         get
@@ -30,8 +30,8 @@ where T : MonoSingleton<T>
     {
         bool createdNew;
         name = "Singleton of " + typeof(T).ToString();
-        mutex = new Mutex(false, name, out createdNew);
-        return createdNew;
+        // mutex = new Mutex(false, name, out createdNew);
+        return true;
     }
 
     private void Awake()
@@ -56,13 +56,13 @@ where T : MonoSingleton<T>
     {
         if (m_Instance!=null)
         {
-            mutex.ReleaseMutex();
+            // mutex.ReleaseMutex();
             // DisInit();
             m_Instance = null;
         }
     }
     private void OnApplicationQuit()
     {
-        mutex.ReleaseMutex();
+        // mutex.ReleaseMutex();
     }
 }

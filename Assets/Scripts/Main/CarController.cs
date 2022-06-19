@@ -68,7 +68,7 @@ public class CarController : MonoBehaviour
         _speedometer.IsSpeedLockActive = true;
         CollideTimes++;
 
-        PlayerPrefs.SetInt("STAT_Collide", PlayerPrefs.GetInt("STAT_Collide", 0) + 1);
+        PlayerPrefs.SetFloat("STAT_Collide", PlayerPrefs.GetFloat("STAT_Collide", 0) + 1);
     }
 
     /// <summary>
