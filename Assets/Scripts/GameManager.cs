@@ -57,17 +57,17 @@ public class GameManager : MonoSingleton<GameManager>
         float avTime = time / lap;
         float bonus = 0;        
         if(avTime <= 20)
-            bonus = lap * 2.5f;
+            bonus = lap * 8.7878f;
         else if(avTime <= 25)
-            bonus = lap * 1.8763f;
+            bonus = lap * 4.8763f;
         else if(avTime <= 30)
-            bonus = lap * 1.48763f;
+            bonus = lap * 3.1415f;
         else if(avTime <= 40)
-            bonus = lap * 0.87f;
+            bonus = lap * 2.020f;
         else if(avTime <= 60)
-            bonus = lap * 0.148763f;
+            bonus = lap * 0.8763f;
         
-        AddLovePoint(CurrentCharacter, (lap + bonus + checkpointPassed/24) * CurrentCharacter.LovePointMultiplier);
+        AddLovePoint(CurrentCharacter, (lap * 3f + bonus + checkpointPassed/12) * CurrentCharacter.LovePointMultiplier);
 
         PlayerPrefs.SetFloat("STAT_GamePlayed", PlayerPrefs.GetFloat("STAT_GamePlayed", 0) + 1);
         PlayerPrefs.SetFloat("STAT_GameTime", PlayerPrefs.GetFloat("STAT_GameTime", 0) + time);

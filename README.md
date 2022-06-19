@@ -1,6 +1,8 @@
 # Renai Circulation
 ###### 2022 Kuso Game Jam - 我也來玩一下好了
 
+![圖文不符是本作的精神](https://img.itch.zone/aW1nLzkyMzM0NzMucG5n/315x250%23c/L55xi1.png)
+
 ## DEMO
 https://jcxyis.itch.io/renai-circulation
 
